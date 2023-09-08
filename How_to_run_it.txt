@@ -1,0 +1,39 @@
+Step 1: Install Required Dependencies - 
+
+	(a) Make sure you have Python installed on your system. You can download and install Python from the official Python website: https://www.python.org/downloads/
+
+	(b) Open a terminal or command prompt in your project directory and install the necessary libraries by running the following command:
+
+	pip install streamlit pydub
+
+Step 2: Prepare Audio Files - 
+
+	-> Place your Chinese and English audio files in the music_folder directory. Make sure the Chinese files start with "cn_" and the English files start with "en_" followed by a unique identifier and end with ".wav" extension. For example: "cn_200.wav", "en_123.wav", etc.
+
+Step 3: If you have FFmpeg on your device then skip step 4 and go yo step 5. If don't have FFmpeg then follow the next step.
+
+Step 4: Download, Extract, and Set up FFmpeg - 
+
+	-> Go to the FFmpeg website: https://github.com/BtbN/FFmpeg-Builds/releases
+	-> Scroll down to the "Get the latest build" section and click on the "ffmpeg-master-latest-win64-gpl.zip" link to download the file for window.
+	-> Locate the downloaded ffmpeg-master-latest-win64-gpl.zip file on your computer.
+	-> Right-click on the file and select "Extract All" to extract its contents.
+	-> Choose a destination folder for the extraction (e.g., C:\ffmpeg).
+	-> Open the Start menu and search for "Environment Variables."
+	-> Click on "Edit the system environment variables."
+	-> In the System Properties window, click on the "Environment Variables" button.
+	-> In the "System variables" section, scroll down and select the "Path" variable.
+	-> Click the "Edit" button.
+	-> Click the "New" button and add the path to the FFmpeg binary folder (C:\ffmpeg\bin or the folder where you extracted FFmpeg).
+	-> Click "OK" to save the changes.
+	-> Open a new command prompt window.
+	-> Type ffmpeg -version and press Enter.
+	-> If FFmpeg is correctly installed and configured, you should see the version information and command usage.
+
+Step 5: Run the Application -
+
+	-> Open a terminal or command prompt and navigate to the directory where the music_player.py file is located. Run the following command to start the application:
+
+	streamlit run music_player.py
+
+	This command will start the Streamlit development server and launch the application in your default web browser.
